@@ -1,0 +1,38 @@
+LinkedList<int> mylist = new LinkedList<int>();
+
+            mylist.AddFirst(1);
+            mylist.AddFirst(2);
+            mylist.AddFirst(3);
+            mylist.AddFirst(4);
+            
+            foreach (int item in mylist)
+            {
+                Console.Write(item + " ");
+            }
+            Console.Write("\nHow many numbers do you want to add?: ");
+            int loopnum = Convert.ToInt32(Console.ReadLine()); 
+            if (loopnum>7)
+            {
+                Console.WriteLine("\nToo many");
+            }
+            else
+            {
+            for (int i = 0; i < loopnum ; i++)
+            {
+            Console.Write("\n\nAdded number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            LinkedListNode<int> newnode = mylist.AddFirst(num);
+
+            if (newnode != null)
+            {
+                Console.WriteLine("\nData Added: "+ num,newnode);
+            }
+            foreach (int item in mylist)
+            {
+                Console.Write(item + " ");
+            }
+           
+            }
+            }
+            Console.ReadLine();

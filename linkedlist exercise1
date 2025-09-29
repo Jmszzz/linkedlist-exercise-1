@@ -32,6 +32,10 @@ LinkedList<int> mylist = new LinkedList<int>();
             {
                 Console.Write(item + " ");
             }
+              if (loopnum>0)
+                {
+                    Console.WriteLine("\nDone!");
+                }
            
             }
             }
